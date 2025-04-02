@@ -8,6 +8,9 @@ output:
     toc_float: true
   pdf_document: default
 date: "2025-03-27"
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
@@ -34,9 +37,11 @@ Lorem Ipsum
 
 -   What the research seeks to find
 
-    -   Predict whether future customer would be satisfied given the details of service
+    -   Predict whether future customer would be satisfied given the
+        details of service
 
-    -   Determine the aspects of service that are important towards customer satisfaction
+    -   Determine the aspects of service that are important towards
+        customer satisfaction
 
 -   Methods of analysis
 
@@ -44,61 +49,112 @@ Lorem Ipsum
 
 **Draft of abstract:**
 
-After industry-wide setbacks from the COVID-19 pandemic, the airline industry is experiencing a strong recovery in profitability. According to the International Air Transport Association (IATA), airlines worldwide have seen improved projections since 2024. The market is projected to showcase an annual growth rate (CAGR 2025-2029) of 4.36%, resulting in a projected market volume of US\$771.26bn by 2029, worldwide (Statista, 2024). However, low-cost carriers (LCCs) are shifting the traditional perceptions of value and service among travelers by offering lower fares with fewer amenities. As traditional full-service airlines compete in this market environment, understanding the main drivers of customer satisfaction becomes critical to maintain competitiveness.
+After industry-wide setbacks from the COVID-19 pandemic, the airline
+industry is experiencing a strong recovery in profitability. According
+to the International Air Transport Association (IATA), airlines
+worldwide have seen improved projections since 2024. The market is
+projected to showcase an annual growth rate (CAGR 2025-2029) of 4.36%,
+resulting in a projected market volume of US\$771.26bn by 2029,
+worldwide (Statista, 2024). However, low-cost carriers (LCCs) are
+shifting the traditional perceptions of value and service among
+travelers by offering lower fares with fewer amenities. As traditional
+full-service airlines compete in this market environment, understanding
+the main drivers of customer satisfaction becomes critical to maintain
+competitiveness.
 
-In this research, we analyze data from over 120,000+ airline passengers, including information on passenger demographics, flight characteristics (delays and distance), as well as service evaluations. Since this data lacks information on the specific airlines and ticket pricing, we will focus on analyzing the service-related factors that universally impact passenger satisfaction. This research aims to:
+In this research, we analyze data from over 120,000+ airline passengers,
+including information on passenger demographics, flight characteristics
+(delays and distance), as well as service evaluations. Since this data
+lacks information on the specific airlines and ticket pricing, we will
+focus on analyzing the service-related factors that universally impact
+passenger satisfaction. This research aims to:
 
-1.  **Predict whether future customer would be satisfied given the details of service**
-2.  **Determine the aspects of service that are important towards customer satisfaction**
+1.  **Predict whether future customer would be satisfied given the
+    details of service**
+2.  **Determine the aspects of service that are important towards
+    customer satisfaction**
 
-In our analysis, we initially explore the dataset to understand the variables and their distributions, as well as detect missing values. Data preparation procedures such as cleaning, normalization, and transformation are conducted before analysis. We utilize Principal Component Analysis (PCA) to reduce dimensionality as well as to determine key variables. Clustering is then implemented to gain deeper insights on passenger groups and patterns of service satisfaction.**\<- placeholder aja, bisa diubah**
+In our analysis, we initially explore the dataset to understand the
+variables and their distributions, as well as detect missing values.
+Data preparation procedures such as cleaning, normalization, and
+transformation are conducted before analysis. We utilize Principal
+Component Analysis (PCA) to reduce dimensionality as well as to
+determine key variables. Clustering is then implemented to gain deeper
+insights on passenger groups and patterns of service satisfaction.**\<-
+placeholder aja, bisa diubah**
 
 In summary.... **(hasil temuan)**
 
 ## Business Problem <a name="1.2"></a>
 
-In this project, Group 17 serves as business consultants, with a focus on improving customer experience in the industry. Our responsibilities are from analyzing customer satisfaction statistics, developing measures to improve the airline's overall performance. Therefore, the business problem that we solve is "how can airlines improve its strategy of services and activities to increase customer satisfaction, especially between segments and main service areas, to achieve stronger competitive advantages?".
+In this project, Group 17 serves as business consultants, with a focus
+on improving customer experience in the industry. Our responsibilities
+are from analyzing customer satisfaction statistics, developing measures
+to improve the airline's overall performance. Therefore, the business
+problem that we solve is "how can airlines improve its strategy of
+services and activities to increase customer satisfaction, especially
+between segments and main service areas, to achieve stronger competitive
+advantages?".
 
 **The reason why we chose airline industry as our focus :**
 
--   Low-cost carriers (LCCs) are shifting the traditional perceptions of value and service among travelers by offering lower fares with fewer amenities.
+-   Low-cost carriers (LCCs) are shifting the traditional perceptions of
+    value and service among travelers by offering lower fares with fewer
+    amenities.
 
--   Intense rivalry among airlines could be easily justified by customer satisfaction. Thus, higher customer satisfaction leads to increased client retention and overall business performance.
+-   Intense rivalry among airlines could be easily justified by customer
+    satisfaction. Thus, higher customer satisfaction leads to increased
+    client retention and overall business performance.
 
--   Concentrating on major market segments may provide a more general view of the aspects contributing to consumer satisfaction.
+-   Concentrating on major market segments may provide a more general
+    view of the aspects contributing to consumer satisfaction.
 
 **Why focus on customer satisfaction?**
 
-Enhance customer loyalty: improving on these key segments and service areas will enhance customer satisfaction that potentially increases customer loyalty rate.
+Enhance customer loyalty: improving on these key segments and service
+areas will enhance customer satisfaction that potentially increases
+customer loyalty rate.
 
-Competitive Advantage: by addressing the service issue, the airline can stand out from the competitors.
+Competitive Advantage: by addressing the service issue, the airline can
+stand out from the competitors.
 
 ## Setting Up the R Workplace <a name="1.3"></a>
 
-Lorem IpsumBesides the Basic R Functions, this project uses multiple packages to enhance the R functionalities and improve the data analytics and visualization quality. This section explains all the packages and functions beyond the Basic R functionalities that we are using in this project in each step of the business analytics process from data cleaning to modeling.
+Lorem IpsumBesides the Basic R Functions, this project uses multiple
+packages to enhance the R functionalities and improve the data analytics
+and visualization quality. This section explains all the packages and
+functions beyond the Basic R functionalities that we are using in this
+project in each step of the business analytics process from data
+cleaning to modeling.
 
-* Data Cleaning and Preparation
+-   Data Cleaning and Preparation
 
-**dplyr** : used to filter rows, select columns, sort data, create new columns, and summarize data.
-**tidyr** : imported to be used to clean and tidy the data, such as reshaping the data from wide to long format.
+**dplyr** : used to filter rows, select columns, sort data, create new
+columns, and summarize data. **tidyr** : imported to be used to clean
+and tidy the data, such as reshaping the data from wide to long format.
 
-* Data Exploration
+-   Data Exploration
 
-**skimr** : designed to provide summary of statistical measures for each variables in data frames.
-**DataExplorer** : used to display comprehensive and convenient interface for data exploration and data visualization.
+**skimr** : designed to provide summary of statistical measures for each
+variables in data frames. **DataExplorer** : used to display
+comprehensive and convenient interface for data exploration and data
+visualization.
 
-* Data Transformation
+-   Data Transformation
 
-* Data Visualization
+-   Data Visualization
 
-**ggplot2** : a package that is useful to visualize data in a more complex and customizable way compared to the basic R plotting functions.
-**corrplot** : used to visualize correlation matrix between two variables in a more visually appealing and informative way.
+**ggplot2** : a package that is useful to visualize data in a more
+complex and customizable way compared to the basic R plotting functions.
+**corrplot** : used to visualize correlation matrix between two
+variables in a more visually appealing and informative way.
 
-* Data Modeling
+-   Data Modeling
 
-* Data Analysis
+-   Data Analysis
 
-Below we will find the commands to install and import the required libraries:
+Below we will find the commands to install and import the required
+libraries:
 
 ```{r}
 # Importing Library
@@ -113,9 +169,16 @@ library(tidyr)
 
 ## Dataset <a name="1.4"></a>
 
-In this assignment, we use data set of [Airline Passenger Satisfaction Dataset](https://www.kaggle.com/datasets/mysarahmadbhat/airline-passenger-satisfaction) through Kaggle.The data consist of 24 variables from 129,880 passengers. Data cleaning and preparation are required to ensure the data is ready for analysis.
+In this assignment, we use data set of [Airline Passenger Satisfaction
+Dataset](https://www.kaggle.com/datasets/mysarahmadbhat/airline-passenger-satisfaction)
+through Kaggle.The data consist of 24 variables from 129,880 passengers.
+Data cleaning and preparation are required to ensure the data is ready
+for analysis.
 
-Firstly import all the data, csv file to be used in the data analysis process. The before using the data, it is important to undertand all data type included in the data set.Subsequently, understanding statistic perofile in the data set could help to prepare the data before using it.
+Firstly import all the data, csv file to be used in the data analysis
+process. The before using the data, it is important to undertand all
+data type included in the data set.Subsequently, understanding statistic
+perofile in the data set could help to prepare the data before using it.
 
 ```{r}
 # Read Data
@@ -134,7 +197,9 @@ summary(data)
 
 ### Data Dictionary
 
-Based on Kaggle, here is the definition of each column in the dataset. This is useful for later stage to understand the data characteristics and how to use it.
+Based on Kaggle, here is the definition of each column in the dataset.
+This is useful for later stage to understand the data characteristics
+and how to use it.
 
 ```{=html}
 <style>
@@ -193,7 +258,11 @@ Based on Kaggle, here is the definition of each column in the dataset. This is u
 
 ## Workflow: Machine-Learning Task Translation <a name="1.5"></a>
 
-The business analysis focuses on what key parameters from passengers' perspective that define their satisfactory level towards airline services. The analysis will be conducted by perfroming predictive modelling (regression analysis) as well as classification. Run code belows to see the workflow of the analysis.
+The business analysis focuses on what key parameters from passengers'
+perspective that define their satisfactory level towards airline
+services. The analysis will be conducted by perfroming predictive
+modelling (regression analysis) as well as classification. Run code
+belows to see the workflow of the analysis.
 
 ```{r}
 file_path <- "Workflow_Group17.png"
@@ -202,24 +271,46 @@ knitr::include_graphics(file_path)
 
 ## Reflection and Limitation <a name="1.6"></a>
 
-In this research, we aim to predict **whether future customer would be satisfied given the details of service** by determining **the aspects of service that are important towards customer satisfaction.** From the dataset, we hypothesize that service characteristics such as arrival and departure delays, on-board service, and comfort play a significant role towards customer satisfaction.
+In this research, we aim to predict **whether future customer would be
+satisfied given the details of service** by determining **the aspects of
+service that are important towards customer satisfaction.** From the
+dataset, we hypothesize that service characteristics such as arrival and
+departure delays, on-board service, and comfort play a significant role
+towards customer satisfaction.
 
-Given that the dataset does not provide information on the specific airline or ticket pricing, we will focus to analyzing the service-related factors that universally impact passenger satisfaction. Understanding and preparing the the dataset will be crucial, as it may contain missing values or quality issues. Hence, we will dedicate the next section on data exploration and preparation. In doing so, we will first visualize the variables to get an understanding of the distributions.
+Given that the dataset does not provide information on the specific
+airline or ticket pricing, we will focus to analyzing the
+service-related factors that universally impact passenger satisfaction.
+Understanding and preparing the the dataset will be crucial, as it may
+contain missing values or quality issues. Hence, we will dedicate the
+next section on data exploration and preparation. In doing so, we will
+first visualize the variables to get an understanding of the
+distributions.
 
 # Data Exploration and Preparation <a name="2"></a>
 
-In this chapter, we will use visual and descriptive data exploration methods to gain a deeper understanding of the distributions and the characteristics of variables in our dataset. We will begin by cleaning the data from any null variables, as well has handle outliers in the data. Later in this chapter, we will continue to explore each variable and interpret features. Finally, we will conduct initial plotting of the data to show how the features are correlated to each other.
+In this chapter, we will use visual and descriptive data exploration
+methods to gain a deeper understanding of the distributions and the
+characteristics of variables in our dataset. We will begin by cleaning
+the data from any null variables, as well has handle outliers in the
+data. Later in this chapter, we will continue to explore each variable
+and interpret features. Finally, we will conduct initial plotting of the
+data to show how the features are correlated to each other.
 
 ## Data Cleaning and Preparation <a name="2.1"></a>
 
-We will start the exploration phase by checking for missing data using the `is.na()` function.
+We will start the exploration phase by checking for missing data using
+the `is.na()` function.
 
 ```{r check_missing_data}
 any(is.na(data))
 colMeans(is.na(data))
 ```
 
-We find that null data only exists for 0.3% and only in the **Arrival Delay** column, therefore this would not significantly affecting the whole dataset. We'll fill the Arrival Delay null with the mean and median of Arrival Delay which is 0.
+We find that null data only exists for 0.3% and only in the **Arrival
+Delay** column, therefore this would not significantly affecting the
+whole dataset. We'll fill the Arrival Delay null with the mean and
+median of Arrival Delay which is 0.
 
 ```{r eliminating_null_values}
 data$Departure.Delay = as.numeric(data$Departure.Delay)
@@ -227,7 +318,9 @@ data$Arrival.Delay[is.na(data$Arrival.Delay)] <-0
 any(is.na(data))
 ```
 
-We succesfully replace the null values in the dataset. Let's check for numerical outliers using the `summary()` function, we will look for major differences between the median and the mean.
+We succesfully replace the null values in the dataset. Let's check for
+numerical outliers using the `summary()` function, we will look for
+major differences between the median and the mean.
 
 ```{r summary_of_data}
 # Extract summary statistics for numerical columns
@@ -242,7 +335,8 @@ knitr::kable(numerical_summary, caption = "Summary of Numerical Columns with Mea
 remove(numerical_summary)
 ```
 
-We notice that there are large outliers in the Flight Distance, as well as in Arrival and Departure Delay. Let's see in the boxplot format :
+We notice that there are large outliers in the Flight Distance, as well
+as in Arrival and Departure Delay. Let's see in the boxplot format :
 
 **Flight Distance**
 
@@ -268,7 +362,10 @@ geom_boxplot(fill = 2,alpha = 0.5,color = 1,outlier.colour = 2) +
 theme_bw()
 ```
 
-From the boxplots above, we can see that Flight Distance is slightly skewed while Arrival Delay and Departure Delay is heavily skewed. We will use median imputation, which is appropriate when the distribution of the data is skewed.
+From the boxplots above, we can see that Flight Distance is slightly
+skewed while Arrival Delay and Departure Delay is heavily skewed. We
+will use median imputation, which is appropriate when the distribution
+of the data is skewed.
 
 ```{r median_imputation}
 # Imputation of flight.distance variable
@@ -293,7 +390,9 @@ Now let's check the distribution of the data after the imputation.
 plot_histogram(data[ , c('Flight.Distance','Arrival.Delay','Departure.Delay')], ncol=2,ggtheme = theme_minimal())
 ```
 
-Below, we will also take a look again at the boxplots for Departure Delay and Arrival Delay. Note that before the imputation, the plots were skewed to the point that the boxes were almost no longer visible.
+Below, we will also take a look again at the boxplots for Departure
+Delay and Arrival Delay. Note that before the imputation, the plots were
+skewed to the point that the boxes were almost no longer visible.
 
 ```{r}
 ggplot(data, aes(x=Departure.Delay)) +
@@ -307,11 +406,16 @@ geom_boxplot(fill = 2,alpha = 0.5,color = 1,outlier.colour = 2) +
 theme_bw()
 ```
 
-We can see that we have significantly normalized the skewness of the data. Thus, we have successfully eliminated all missing values and normalized all outliers in the data. Next, we will continue further into the data exploration phase.
+We can see that we have significantly normalized the skewness of the
+data. Thus, we have successfully eliminated all missing values and
+normalized all outliers in the data. Next, we will continue further into
+the data exploration phase.
 
 ## Data Exploration <a name="2.2"></a>
 
-In this subchapter, we will begin by conducting descriptive univariate data analysis which is followed by association between numerical and categorical variables.
+In this subchapter, we will begin by conducting descriptive univariate
+data analysis which is followed by association between numerical and
+categorical variables.
 
 ### Univariate Data Analysis
 
@@ -323,7 +427,13 @@ Now we visualize the distribution in each categorical column
 plot_bar(data, ncol=2, order_bar=TRUE, ggtheme = theme_minimal())
 ```
 
-We can see that the gender distribution is equal. Furthermore, the majority type of travel is business which is also reflected in the customer type, where the majority is returning customers rather than first-time. Hence, increasing satisfaction of loyal customers will bring significant impact to the overall of airline customer satisfaction rate. Next, we will visualize the distribution in each numerical column. The ID column is left out as it is just a list of numbers.
+We can see that the gender distribution is equal. Furthermore, the
+majority type of travel is business which is also reflected in the
+customer type, where the majority is returning customers rather than
+first-time. Hence, increasing satisfaction of loyal customers will bring
+significant impact to the overall of airline customer satisfaction rate.
+Next, we will visualize the distribution in each numerical column. The
+ID column is left out as it is just a list of numbers.
 
 ```{r visualizing_numerical_variables}
 
@@ -331,7 +441,10 @@ We can see that the gender distribution is equal. Furthermore, the majority type
 plot_histogram(data[ , !names(data) %in% "ID"], ncol=2, ggtheme = theme_minimal())
 ```
 
-From the visualizations above, it is not immediately clear which variables may be strongly influencing each other. Hence, we will continue the exploration by analyzing the associations between numerical variables.
+From the visualizations above, it is not immediately clear which
+variables may be strongly influencing each other. Hence, we will
+continue the exploration by analyzing the associations between numerical
+variables.
 
 ### Association Between Two Numerical Variable
 
@@ -358,7 +471,7 @@ corrplot(cor_matrix,
          diag = FALSE)
 ```
 
-Lorem Ipsum
+**Correlation Matrix of Numerical Variables**
 
 ```{r}
 # Discover strong correlation
@@ -369,9 +482,18 @@ filtered <- filtered[!duplicated(t(apply(filtered[, 1:2], 1, sort))), ]
 print(filtered)
 ```
 
-In-flight comfort and service such as Seat Comfort, Leg Room Service, Cleanliness, Food and Drink, In-flight Service, In-flight Wifi Service, and In-flight Entertainment are highly correlated with each other. This is expected as they are all related to the comfort and service provided during the flight.
+From the graph, we can see that there are some variables that have a
+strong correlation with each other, which is Seat Comfort, Leg Room
+Service, Cleanliness, Food & Drink, and In-flight Service exhibit strong
+positive correlations with each other. This suggests that customers who
+rate one aspect of the service highly tend to rate others positively as
+well. Furthermore, A high correlation between Departure Delay and
+Arrival Delay indicates that flights that depart late are also likely to
+arrive late. Other numerical factors such as Flight Distance may have
+weaker correlations with customer satisfaction, indicating that distance
+alone is not a major factor in satisfaction levels.
 
-Digital service such as Ease of Online Booking, Online Boarding, and In-flight Wifi Service are also highly correlated with each other. This is expected as they are all related to the digital service provided by the airline.
+**In-flight Service vs On-board Service (in %)**
 
 ```{r}
 count_data <- as.data.frame(table(data$In.flight.Service, data$On.board.Service))
@@ -389,7 +511,15 @@ ggplot(count_data, aes(x = Var1, y = Var2, fill = Percent)) +
   theme_minimal()
 ```
 
-Lorem Ipsum
+The heatmap above shows a strong positive correlation between In-flight
+Service and On-board Service. This suggests that passengers who rate one
+aspect of the service highly also tend to rate the other positively.
+Darker shades indicate higher percentages, with the highest
+concentration (20.2%) at ( In-flight Service= 4, On-board Service = 4),
+suggesting a tendency for passengers to rate both aspects positively
+together.
+
+**In-flight Service vs Food and Drink (in %)**
 
 ```{r}
 count_data <- as.data.frame(table(data$In.flight.Entertainment, data$Food.and.Drink))
@@ -407,7 +537,14 @@ ggplot(count_data, aes(x = Var1, y = Var2, fill = Percent)) +
   theme_minimal()
 ```
 
-Lorem Ipsum
+From the heatmap above, we can see that there is a strong positive
+correlation between In-flight Entertainment and Food and Drink. he most
+common rating combination is (4,4), accounting for 16.9% of responses,
+followed by (5,5) with 14.8%, indicating This suggests that passengers
+who rate the in-flight entertainment highly also tend to rate the food
+and drink positively.
+
+**In-flight Entertainment vs Cleanliness (in %)**
 
 ```{r}
 count_data <- as.data.frame(table(data$In.flight.Entertainment, data$Cleanliness))
@@ -425,7 +562,13 @@ ggplot(count_data, aes(x = Var1, y = Var2, fill = Percent)) +
   theme_minimal()
 ```
 
-Lorem Ipsum
+We can see from the heatmap above that there is a positive correlation
+between In-flight Entertainment and Cleanliness with frequent rating
+pair is (4,4) at 17.9%, followed by (5,5) at 15.4%,. This suggests that
+passengers who rate the in-flight entertainment highly also tend to rate
+the cleanliness positively.
+
+**In-flight Entertainment vs Seat Comfort (in %)**
 
 ```{r}
 count_data <- as.data.frame(table(data$In.flight.Entertainment, data$Seat.Comfort))
@@ -443,7 +586,11 @@ ggplot(count_data, aes(x = Var1, y = Var2, fill = Percent)) +
   theme_minimal()
 ```
 
-Lorem Ipsum
+This heatmap depicts a positive correlation between In-flight
+Entertainment and Seat Comfort. The most common rating combination is
+(4,4) at 17.9%, followed by (5,5) at 15.1%. This suggests that
+passengers who rate the in-flight entertainment highly also tend to rate
+the seat comfort positively.
 
 ```{r}
 count_data <- as.data.frame(table(data$Food.and.Drink, data$Cleanliness))
@@ -461,7 +608,7 @@ ggplot(count_data, aes(x = Var1, y = Var2, fill = Percent)) +
   theme_minimal()
 ```
 
-Lorem Ipsum
+**Food and Drink vs Seat Comfront (in %)**
 
 ```{r}
 count_data <- as.data.frame(table(data$Food.and.Drink, data$Seat.Comfort))
@@ -479,7 +626,12 @@ ggplot(count_data, aes(x = Var1, y = Var2, fill = Percent)) +
   theme_minimal()
 ```
 
-Lorem Ipsum
+This heatmap illustrates a positive correlation between Food and Drink
+and Seat Comfort. The most common rating combination is (4,4) at 16%,
+followed by (5,5) at 13.8%. This suggests that passengers who rate the
+food and drink highly also tend to rate the seat comfort positively.
+
+**Cleanliness vs Seat Comfort (in %)**
 
 ```{r}
 count_data <- as.data.frame(table(data$Cleanliness, data$Seat.Comfort))
@@ -497,7 +649,12 @@ ggplot(count_data, aes(x = Var1, y = Var2, fill = Percent)) +
   theme_minimal()
 ```
 
-Lorem Ipsum
+This heatmap shows a positive correlation between Cleanliness and Seat
+Comfort. The most common rating combination is (4,4) at 17.9%, followed
+by (5,5) at 15.1%. This suggests that passengers who rate the
+cleanliness highly also tend to rate the seat comfort positively.
+
+**In-Flight Wifi Service vs Ease of Online Booking (in %)**
 
 ```{r}
 count_data <- as.data.frame(table(data$In.flight.Wifi.Service, data$Ease.of.Online.Booking))
@@ -515,7 +672,16 @@ ggplot(count_data, aes(x = Var1, y = Var2, fill = Percent)) +
   theme_minimal()
 ```
 
-Lorem Ipsum
+This heatmap shows a positive correlation between In-flight Wifi Service
+and Ease of Online Booking. The most common rating pair is (2,3) at
+18.1%, closely followed by (1,2) at 18% and (1,1) at 12.5%, suggesting
+that many passengers who rated WiFi service poorly also found online
+booking less convenient. Interestingly, higher ratings for online
+booking (4-5) are associated with mixed ratings for WiFi, with 8.1%
+rating both as (5,5). This pattern implies that while passengers may
+find booking easy, WiFi service still receives moderate to low ratings.
+
+**Flight Distance vs Departure Delay**
 
 ```{r}
 ggplot(data, aes(x = Flight.Distance, y = Departure.Delay)) +
@@ -527,7 +693,17 @@ ggplot(data, aes(x = Flight.Distance, y = Departure.Delay)) +
   theme_minimal()
 ```
 
-Lorem Ipsum
+From the scatter plot above, we can see that there is a slight positive
+correlation between Flight Distance and Departure Delay. The red line
+likely represents a trend or regression line, showing the general
+pattern in the data. The data appears to be highly discrete, with many
+flights experiencing common delay times (e.g., 0, 5, 10, 15 minutes).
+The trend line suggests that departure delays slightly increase as
+flight distance increases, but the relationship is not strong. There is
+significant variability in departure delays across all flight distances,
+meaning other factors likely influence delays beyond just distance..
+
+**FLight Distance vs Arrival Delay**
 
 ```{r}
 ggplot(data, aes(x = Flight.Distance, y = Arrival.Delay)) +
@@ -539,9 +715,14 @@ ggplot(data, aes(x = Flight.Distance, y = Arrival.Delay)) +
   theme_minimal()
 ```
 
-### Association Between Numerical and Categorical Variable
+The scatter plot above shows a slight positive correlation between
+Flight Distance and Arrival Delay.he red line, likely a trend or
+regression line, suggests that the average arrival delay remains
+relatively low regardless of flight distance. While there is some
+variability, the data does not indicate a strong correlation between
+flight distance and arrival delay.
 
-Lorem ipsum
+### Association Between Numerical and Categorical Variable
 
 ```{r}
 data_subset <- data %>%
@@ -564,7 +745,15 @@ ggplot(data_long, aes(x = Satisfaction, y = Value, fill = Satisfaction)) +
   )
 ```
 
-Lorem Ipsum
+The boxplots compare numeric variables (Age, Arrival Delay, Departure
+Delay, and Flight Distance) by satisfaction levels (Neutral or
+Dissatisfied vs. Satisfied). Satisfied customers tend to have higher
+ages and longer flight distances, as indicated by the higher medians and
+broader distributions for these groups. Conversely, Arrival and
+Departure Delays show minimal differences between satisfaction groups,
+with both distributions being highly skewed and overlapping
+significantly. This suggests that delays may not strongly influence
+satisfaction compared to age and flight distance.
 
 ```{r}
 data_subset <- data %>%
@@ -608,7 +797,21 @@ ggplot(data_long, aes(x = Value, fill = Satisfaction)) +
   )
 ```
 
-Lorem Ipsum
+The histograms display the distribution of numeric variables grouped by
+customer satisfaction levels which is Neutral or Dissatisfied (pink) and
+Satisfied (blue) across various aspects of airline services. In general,
+higher ratings (closer to 5) for services such as Check-in Service, Ease
+of Online Booking, Leg Room Service, Online Boarding, and Gate Location
+correspond more strongly with satisfied customers. Conversely,
+dissatisfaction is more prevalent at lower ratings (closer to 0 or 1).
+For Flight Distance, satisfied customers are slightly more common in
+longer flights. Similarly, variables like Baggage Handling, Cleanliness,
+Food and Drink, In-flight Entertainment, In-flight Service, In-flight
+Wi-Fi Service, and Seat Comfort show a similar trend where higher
+ratings indicate greater satisfaction, while lower ratings are
+associated with dissatisfaction. These distributions suggest that
+satisfaction is closely tied to the quality of services provided across
+these dimensions.
 
 ```{r}
 data_subset <- data %>%
@@ -631,7 +834,17 @@ ggplot(data_long, aes(x = Class, y = Value, fill = Class)) +
   )
 ```
 
-Lorem Ipsum
+The boxplots compare Age, Arrival Delay, Departure Delay, and Flight
+Distance across Business, Economy, and Economy Plus classes. Business
+class passengers are generally older, with a higher median age compared
+to Economy and Economy Plus, which show similar distributions. Arrival
+and departure delays have medians near zero across all classes,
+indicating most flights are on time, but all classes exhibit outliers
+representing extreme delays. Flight distance is notably higher for
+Business class, with a greater median and variability compared to the
+shorter and more consistent distances in Economy and Economy Plus. This
+suggests Business class is preferred for longer flights and by older
+passengers, while delays are consistent across all classes.
 
 ```{r}
 data_subset <- data %>%
@@ -675,7 +888,22 @@ ggplot(data_long, aes(x = Value, fill = Class)) +
   )
 ```
 
-Lorem Ipsum
+The histograms compare numeric variables across flight classes
+(Business, Economy, and Economy Plus) to assess customer satisfaction.
+Business class consistently receives higher ratings across most
+variables, such as Check-in Service, Leg Room Service, Online Boarding,
+On-board Service, Cleanliness, Food and Drink, In-flight Entertainment,
+In-flight Wifi Service, and Seat Comfort, highlighting its superior
+service quality and comfort. Economy Plus generally performs better than
+Economy but falls short of Business class ratings. Economy class
+exhibits greater variability in ratings and is often skewed toward lower
+scores for services like legroom, onboard service, food quality, and
+seat comfort. Flight Distance shows Business class dominating longer
+flights, while Economy handles shorter distances. Variables like Gate
+Location and Ease of Online Booking show relatively even distributions
+across classes. Overall, the data emphasizes the premium experience
+associated with Business class compared to Economy and Economy Plus.
+
 
 ```{r}
 data_subset <- data %>%
@@ -698,7 +926,15 @@ ggplot(data_long, aes(x = Type.of.Travel, y = Value, fill = Type.of.Travel)) +
   )
 ```
 
-Lorem Ipsum
+he boxplots illustrate the distribution of four numeric variables,Age,
+Arrival Delay, Departure Delay, and Flight Distance grouped by the type
+of travel (Business or Personal). Business travelers tend to be slightly
+older on average than personal travelers, with a narrower age range.
+Both groups experience similar patterns in arrival and departure delays,
+though delays for personal travel show more variability and outliers.
+Flight distance varies significantly between the two groups, with
+business travelers generally covering shorter distances compared to
+personal travelers, which exhibit a wider range and more outliers.
 
 ```{r}
 data_subset <- data %>%
@@ -742,7 +978,13 @@ ggplot(data_long, aes(x = Value, fill = Type.of.Travel)) +
   )
 ```
 
-Lorem Ipsum
+The histograms illustrate, Across most variables, Business travelers
+dominate the counts, particularly for higher ratings (4 and 5),
+indicating greater satisfaction. In contrast, Personal travelers are
+fewer and show a more even distribution across lower and higher ratings.
+Flight Distance shows a distinct peak for shorter distances, with
+Business travelers being more frequent. Overall, Business travelers tend
+to rate services higher than Personal travelers.
 
 ```{r}
 data_subset <- data %>%
@@ -765,7 +1007,17 @@ ggplot(data_long, aes(x = Gender, y = Value, fill = Gender)) +
   )
 ```
 
-Lorem Ipsum
+The boxplots compare four numeric variables of Age, Arrival Delay,
+Departure Delay, and Flight Distance by gender (Female and Male). For
+Age, males have a slightly higher median than females, with similar
+interquartile ranges (IQRs) and no visible outliers. Arrival Delay and
+Departure Delay show comparable distributions for both genders, with
+medians near zero, narrow IQRs, and numerous outliers indicating extreme
+delays. Flight Distance reveals a slightly higher median and wider
+variability among males compared to females, with some outliers in both
+groups representing unusually long flights. Overall, the distributions
+of delays are similar across genders, while Flight Distance shows more
+variability for males.
 
 ```{r}
 data_subset <- data %>%
@@ -809,7 +1061,19 @@ ggplot(data_long, aes(x = Value, fill = Gender)) +
   )
 ```
 
-Lorem Ipsum
+The histograms illustrate the distribution of ratings for various
+airline service attributes (Baggage Handling, Cleanliness, Food and
+Drink, In-flight Entertainment, In-flight Service, In-flight WiFi
+Service, and Seat Comfort) segmented by gender (Female and Male). Across
+most categories, ratings of 4 and 5 are predominant, indicating overall
+positive feedback. Both genders exhibit similar patterns in their
+evaluations, with slight variations in proportions. For example, females
+appear to rate slightly higher in categories like In-flight
+Entertainment and Cleanliness compared to males. Conversely, males seem
+to have a marginally higher count in lower ratings (1–3) for some
+categories like Seat Comfort and In-flight WiFi Service. This suggests
+gender-based nuances in satisfaction levels but overall consistency in
+favoring higher ratings across services
 
 ```{r}
 data_subset <- data %>%
@@ -832,7 +1096,7 @@ ggplot(data_long, aes(x = Customer.Type, y = Value, fill = Customer.Type)) +
   )
 ```
 
-Lorem Ipsum
+The boxplots compare numeric variables (Age, Arrival Delay, Departure Delay, and Flight Distance) between two customer types: First-time and Returning. For Age, returning customers tend to be older, with a higher median and wider range compared to first-time customers. Arrival Delay and Departure Delay show similar distributions for both groups, with most values concentrated around zero and a significant number of outliers indicating occasional long delays. For Flight Distance, returning customers generally travel longer distances, as evidenced by a higher median and greater variability compared to first-time customers. Overall, returning customers exhibit distinct patterns in age and flight distance, while delays are similarly distributed across both groups.
 
 ```{r}
 data_subset <- data %>%
@@ -876,7 +1140,7 @@ ggplot(data_long, aes(x = Value, fill = Customer.Type)) +
   )
 ```
 
-Lorem Ipsum
+The two sets of histograms display the distribution of numeric variables related to customer satisfaction across two customer types: "First-time" and "Returning." Each variable, such as "Check.in.Service," "Flight.Distance," "Leg.Room.Service," and others, is rated on a scale (likely 0–5), and the counts for each rating are shown separately for the two customer types, with "Returning" customers represented in teal and "First-time" customers in pink. Across most variables, returning customers consistently dominate the counts, suggesting they are more frequent or engaged with the airline. Ratings of 4 and 5 tend to have higher counts for both groups in service-related categories like "Ease.of.Online.Booking," "Leg.Room.Service," and "Seat.Comfort," indicating general satisfaction. However, some variables like "Gate.Location" and "In.flight.Wifi.Service" show substantial variability, suggesting room for improvement in these areas. Overall, the histograms provide insights into customer preferences and satisfaction trends based on experience type.
 
 ### Association Between Two Categorical Variable
 
@@ -918,7 +1182,8 @@ Lorem ipsum
 
 ## Feature Engineering <a name="2.3"></a>
 
-We notice that the age distribution have high variation, therefore we try to create the age_group column
+We notice that the age distribution have high variation, therefore we
+try to create the age_group column
 
 ```{r}
 data = data %>% mutate(Age_Range = if_else(Age <= 16,"Children",
@@ -930,9 +1195,11 @@ if_else(30 < Age & Age <= 45,"Middle Aged","Old"))))
 plot_bar(data$Age_Range,ncol=2,order_bar=T,ggtheme = theme_minimal())
 ```
 
-Now we can interpret from the age group that the largest segment of our customer is belong to old age group which is >45 years old.
+Now we can interpret from the age group that the largest segment of our
+customer is belong to old age group which is \>45 years old.
 
-Another data we can group is the flight distance which currently right skewed
+Another data we can group is the flight distance which currently right
+skewed
 
 ```{r}
 data = data %>% mutate(Distance_Group = if_else(Flight.Distance < 1000,"Below 1000",
@@ -945,7 +1212,8 @@ if_else(3000 < Flight.Distance & Flight.Distance < 4000,"3000-4000","Above 4000"
 plot_bar(data$Distance_Group,ncol=2,order_bar=T,ggtheme = theme_minimal())
 ```
 
-We can divide which customer experiencing delay or not based on departure delay and arrival delay
+We can divide which customer experiencing delay or not based on
+departure delay and arrival delay
 
 ```{r}
 data$delay.status = ifelse(data$Departure.Delay > 0 | data$Arrival.Delay > 0, "Delayed", "On Time")
@@ -953,12 +1221,13 @@ data$delay.status = ifelse(data$Departure.Delay > 0 | data$Arrival.Delay > 0, "D
 plot_bar(data$delay.status,ncol=2,order_bar=T,ggtheme = theme_minimal())
 ```
 
-We'll try to grouping the features into category of services that could be improved by the airline :
+We'll try to grouping the features into category of services that could
+be improved by the airline :
 
-Flight General services : Food and Drink, In-flight Service
-Flight Experience : In Flight Wifi Service, In Flight Entertainment
-Digital services : Ease of Online Booking, Online Boarding
-Comfort services : Seat Comfort, Leg Room Service, Cleanliness
+Flight General services : Food and Drink, In-flight Service Flight
+Experience : In Flight Wifi Service, In Flight Entertainment Digital
+services : Ease of Online Booking, Online Boarding Comfort services :
+Seat Comfort, Leg Room Service, Cleanliness
 
 ```{r}
 data$Flight.Service = rowSums(data[,c('Food.and.Drink','In.flight.Service')],na.rm = TRUE)
@@ -977,7 +1246,8 @@ Lorem Ipsum
 plot_histogram(data, ncol=2,ggtheme = theme_minimal())
 ```
 
-We can see that the data is not normally distributed, therefore we need to normalize the data.
+We can see that the data is not normally distributed, therefore we need
+to normalize the data.
 
 ```{r}
 data$Departure.Delay.Duration = ifelse(data$Departure.Delay > 0, data$Departure.Delay, NA)
@@ -991,7 +1261,8 @@ data$Arrival.Delay.Duration.log = log(1 + data$Arrival.Delay.Duration)
 plot_histogram(data[, c("Flight.Distance.log", "Age.log", "Departure.Delay.Duration.log", "Arrival.Delay.Duration.log")], ncol=2,ggtheme = theme_minimal())
 ```
 
-We can see that the data is now normally distributed. Now we need to normalize the data to have the same scale.
+We can see that the data is now normally distributed. Now we need to
+normalize the data to have the same scale.
 
 ```{r}
 data$Flight.Distance.log.z = scale(data$Flight.Distance.log)
@@ -1006,7 +1277,9 @@ Lorem Ipsum
 
 ## Initial Plotting <a name="2.5"></a>
 
-Our target is the satisfaction rate of the airlines services, therefore we need to identified how each variable are correlated to the satisfaction
+Our target is the satisfaction rate of the airlines services, therefore
+we need to identified how each variable are correlated to the
+satisfaction
 
 ```{r}
 plot_bar(data,by='Satisfaction',ncol=2)
@@ -1040,7 +1313,10 @@ Lorem Ipsum
 data %>% group_by(Class, Satisfaction) %>% summarize(num=n()) %>% mutate(percentage=round(num*100/sum(num),2))
 ```
 
-We notice that economy class passenger is having high customer base but with high percentage of dissatisfied customer rate. Therefore targeting this customer base for services improvement will highly affecting airline overall satisfaction rate.
+We notice that economy class passenger is having high customer base but
+with high percentage of dissatisfied customer rate. Therefore targeting
+this customer base for services improvement will highly affecting
+airline overall satisfaction rate.
 
 ```{r}
 data %>% group_by(Type.of.Travel, Satisfaction) %>%
@@ -1048,7 +1324,9 @@ summarize(num=n()) %>%
 mutate(percentage=round(num*100/sum(num),2))
 ```
 
-Personal type of travel passenger is having a third of airline total customer with the number of satisfied customer is only 10% from it. Therefore it is also important customer segment to be improved.
+Personal type of travel passenger is having a third of airline total
+customer with the number of satisfied customer is only 10% from it.
+Therefore it is also important customer segment to be improved.
 
 ```{r}
 data %>% group_by(Customer.Type, Satisfaction) %>%
@@ -1056,7 +1334,9 @@ summarize(num=n()) %>%
 mutate(percentage=round(num*100/sum(num),2))
 ```
 
-76% of first time customer are feels dissatisfied with the airline services, this could be a problem because in the long term it will reducing airlines capability in increasing customer retention.
+76% of first time customer are feels dissatisfied with the airline
+services, this could be a problem because in the long term it will
+reducing airlines capability in increasing customer retention.
 
 ```{r}
 data %>% filter(Customer.Type == 'First-time') %>% group_by(Class ,Satisfaction) %>%
@@ -1064,7 +1344,8 @@ summarize(num=n()) %>%
 mutate(percentage=round(num*100/sum(num),2))
 ```
 
-Most of the first-time customer feel dissatisfied in every class with notably higher in business and economy class.
+Most of the first-time customer feel dissatisfied in every class with
+notably higher in business and economy class.
 
 ```{r}
 data %>% group_by(Distance_Group) %>%
@@ -1072,9 +1353,13 @@ summarize(num=n()) %>%
 mutate(percentage=round(num*100/sum(num),2))
 ```
 
-Based on the satisfaction rate in each of the distance group, we can notice that as the distance lower the rate of disatisfied customer is increasing. This become a problem because 60% of the airline customer is having journey below 1000.
+Based on the satisfaction rate in each of the distance group, we can
+notice that as the distance lower the rate of disatisfied customer is
+increasing. This become a problem because 60% of the airline customer is
+having journey below 1000.
 
-Next we will try to analyze the service factors related to the customer satisfaction, starting with customer type :
+Next we will try to analyze the service factors related to the customer
+satisfaction, starting with customer type :
 
 ```{r}
 
@@ -1102,7 +1387,9 @@ ggplot(mean_df, aes(x = reorder(Variable, Mean), y = Mean)) +
   labs(title = "Mean of Continuous Variables", x = "Variable", y = "Mean Value")
 ```
 
-We can identify that from the first time customer, the services that dissapointing them most in Departure and Arrival Time Convenience, Ease of Online Booking, and Wifi Service.
+We can identify that from the first time customer, the services that
+dissapointing them most in Departure and Arrival Time Convenience, Ease
+of Online Booking, and Wifi Service.
 
 ```{r}
 
@@ -1130,7 +1417,9 @@ ggplot(mean_df, aes(x = reorder(Variable, Mean), y = Mean)) +
   labs(title = "Mean of Continuous Variables", x = "Variable", y = "Mean Value")
 ```
 
-We can identify that from the Personal type of travel customers, the services that dissapointing them most in Departure and Arrival Time Convenience, Ease of Online Booking, and Wifi Service.
+We can identify that from the Personal type of travel customers, the
+services that dissapointing them most in Departure and Arrival Time
+Convenience, Ease of Online Booking, and Wifi Service.
 
 ```{r}
 
@@ -1158,17 +1447,39 @@ ggplot(mean_df, aes(x = reorder(Variable, Mean), y = Mean)) +
   labs(title = "Mean of Continuous Variables", x = "Variable", y = "Mean Value")
 ```
 
-We can identify that from the Economy class customers, the services that dissapointing them most in Online Boarding, Ease of Online Booking, and Wifi Service.
+We can identify that from the Economy class customers, the services that
+dissapointing them most in Online Boarding, Ease of Online Booking, and
+Wifi Service.
 
 ### Summary of Initial Plotting
 
--   43% of total passengers have liked the airline service. The majority of customers who are satisfied are from business class
--   57% of total passengers are not satisfied. The majority of them are from Economy class
--   Only 18% of people have travelled for first time in our airline service. Out of those customers, nearly 76% of customers are not satisfied with our service which could create a chance in future of not returing of customers to our service again. When passengers are coming for first time, most of them have chosen the economy class
--   Out of the customers who opted for business class, nearly 69% of customers are satisfied with the business class. Out of the customers who opted for economy class, nearly 81% of them are not satisfied with it. Customers who opted for economy plus class,nearly 75% of them are not satisfied with it.
--   Whether people are coming for first time or not and also irrespective of their travel type, they are mostly not satisfied with the Economy and Economy Plus classes. There is strong need for the improvement of Economy class since 45% of total passengers are from economy class. Moreover, 60% of passengers travel less than 10k km and most of them prefer economy class.
--   Passengers are not so satisfied with online booking, Online Boarding and the Wifi service mostly.
--   82% of total passengers are returning to the airline service. Out of those 105773 passengers,50% of passengers are from busines class and 42% of passengers are from economy class. Customer who are returning to our service are aged above 30 and make business travel and travel less than 1000 km mostly
+-   43% of total passengers have liked the airline service. The majority
+    of customers who are satisfied are from business class
+-   57% of total passengers are not satisfied. The majority of them are
+    from Economy class
+-   Only 18% of people have travelled for first time in our airline
+    service. Out of those customers, nearly 76% of customers are not
+    satisfied with our service which could create a chance in future of
+    not returing of customers to our service again. When passengers are
+    coming for first time, most of them have chosen the economy class
+-   Out of the customers who opted for business class, nearly 69% of
+    customers are satisfied with the business class. Out of the
+    customers who opted for economy class, nearly 81% of them are not
+    satisfied with it. Customers who opted for economy plus class,nearly
+    75% of them are not satisfied with it.
+-   Whether people are coming for first time or not and also
+    irrespective of their travel type, they are mostly not satisfied
+    with the Economy and Economy Plus classes. There is strong need for
+    the improvement of Economy class since 45% of total passengers are
+    from economy class. Moreover, 60% of passengers travel less than 10k
+    km and most of them prefer economy class.
+-   Passengers are not so satisfied with online booking, Online Boarding
+    and the Wifi service mostly.
+-   82% of total passengers are returning to the airline service. Out of
+    those 105773 passengers,50% of passengers are from busines class and
+    42% of passengers are from economy class. Customer who are returning
+    to our service are aged above 30 and make business travel and travel
+    less than 1000 km mostly
 
 ## Reflections <a name="2.6"></a>
 
