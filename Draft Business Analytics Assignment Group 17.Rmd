@@ -3222,6 +3222,7 @@ ggplot(top_5_economy, aes(x = reorder(Variable, Estimate), y = Estimate, fill = 
   scale_fill_manual(values = c("Positive Influence" = "yellow2", "Negative Influence" = "tomato")) +
   theme_minimal()
 ```
+<br><br>
 <span style="color: #1E90FF; font-size: 16px;">**FINAL REMARKS: MODEL COMPARISON**</span><br>
 **Model performance comparison**<br>
 | Model              | Accuracy |
@@ -3236,59 +3237,33 @@ Next we will evaluate the model predictor to define what top parameters that inf
 **Notes: RF: Random Forest, LR: Logistic Regression**<br>
 1: significant influencer, 0: not significant influencer<br>
 
-```{r setup, include=FALSE}
-library(knitr)
-library(kableExtra)
-library(dplyr)
-library(magrittr)  # for %>%
-```
-```{r}
-# Create the data frame
-df <- data.frame(
-  Parameters = c(
-    "Online Boarding", "Departure and Arrival Time Convenience", "Checkin Service",
-    "Flight Entertainment", "Seat Comfort", "In Flight Wifi Service", "Cleanliness",
-    "Baggage Handling", "Ease of Online Booking", "In Flight Service",
-    "Leg room service", "On board service", "Gate Location"
-  ),
-  BUSINESS_RF = c(1,1,1,1,1,0,0,0,0,0,0,0,0),
-  BUSINESS_LR = c(1,0,1,1,0,0,0,0,0,0,1,1,0),
-  ECONOMY_RF = c(1,0,0,0,0,1,0,1,1,1,0,0,0),
-  ECONOMY_LR = c(0,0,1,1,0,1,0,0,0,0,0,1,1)
-)
-
-# Helper function to color cells
-cell_color <- function(x) {
-  ifelse(x == 1,
-         cell_spec(x, background = "#f4cccc"),  # Soft red
-         cell_spec(x, background = "#fff2cc"))  # Soft yellow
-}
-
-# Apply coloring to each column except the Parameters
-df_colored <- df
-df_colored[,-1] <- lapply(df[,-1], cell_color)
-
-# Create the styled table
-kbl(df_colored, escape = FALSE,
-    col.names = c("Parameters", "Business RF", " Business LR", "Economy RF", " Economy LR"),
-    align = "lcccc") %>%
-  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover")) %>%
-  row_spec(0, background = "#ADD8E6")  # Soft blue header
-
-
-```
+| Parameters                        | BUSINESS RF | BUSINESS LR | ECONOMY RF | ECONOMY LR |
+|-----------------------------------|-------------|-------------|------------|------------|
+| Online Boarding                   | 1           | 1           | 1          | 0          |
+| Departure and Arrival Time Convenience | 1       | 0           | 0          | 0          |
+| Checkin Service                   | 1           | 1           | 0          | 1          |
+| Flight Entertainment              | 1           | 1           | 0          | 1          |
+| Seat Comfort                      | 1           | 0           | 0          | 0          |
+| In Flight Wifi Service            | 0           | 0           | 1          | 1          |
+| Cleanliness                       | 0           | 0           | 0          | 0          |
+| Baggage Handling                  | 0           | 0           | 1          | 0          |
+| Ease of Online Booking            | 0           | 0           | 1          | 0          |
+| In Flight Service                 | 0           | 0           | 1          | 0          |
+| Leg room service                  | 0           | 1           | 0          | 0          |
+| On board service                  | 0           | 1           | 0          | 1          |
+| Gate Location                     | 0           | 0           | 0          | 1          |
 
 TOP 5 is defined through the method as below:<br>
 1. If the parameter shows consensus from both model (Random Forest and Logistic Regression) showing significant then it is considered as top 5 parameter<br>
 2. If no significant consensus (significant on one model but not other), further analysis is performed by looking at the significant comparison compared to other parameters in the model. The higher level significant the parameter in the model, the more likely it is to be considered as top 5 parameter<br><br>
 Based on the result analysis, top 5 parameters that influence customer satisfaction in both classes are:<br><br>
-| No      | Business Top Parameters |Economy Top Parameters |
-|---------|-------------------------|-----------------------|
-| 1       | Online Boarding          | In Flight Wifi Service |
-| 2       | Departure and Arrival Time Convenience | Flight Entertainment |
-| 3       | Checkin Service         | Baggage Handling       |
-| 4       | Flight Entertainment     | Ease of Online Booking |
-| 5       | Leg room service         | In Flight Service      |
+| No      | Business Top Parameters             | Economy Top Parameters        |
+|---------|-------------------------------------|--------------------------------|
+| 1       | Online Boarding                    | In Flight Wifi Service        |
+| 2       | Departure and Arrival Time Convenience | Flight Entertainment       |
+| 3       | Checkin Service                    | Baggage Handling              |
+| 4       | Flight Entertainment               | Ease of Online Booking        |
+| 5       | Leg room service                   | In Flight Service             |
 <br>
 ## Recommendation <a name="4.2"></a>
 We have developed models to predict customer satisfaction based on various service aspects. Understanding satisfaction contributors is important because customers satisfaction mediates the impact of service quality on corporate braning and perceived value on brand loyalti (Hussain, 2016). The analysis revealed that the most significant predictors of satisfaction differ between Business and Economy class passengers. As we can see, the airline industry segmentation between business and economy class is quite strong, and the two classes have different preferences. Therefore, improving the satisfaction rate in business and economy segment requires different approaches.<br> <br>
