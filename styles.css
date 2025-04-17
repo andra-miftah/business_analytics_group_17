@@ -46,8 +46,10 @@
     width: 600px; /* Adjust description column width */
   }
   
-  pre, .r-output, .r-image, .figure, .knitr-img {
-    text-align: center;
+  img {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
   
 </style>
