@@ -4508,7 +4508,7 @@ summary(model)</code></pre>
 ## C5.0.formula(formula = Satisfaction ~ ., data = training)
 ## 
 ## 
-## C5.0 [Release 2.07 GPL Edition]      Thu Apr 17 20:20:21 2025
+## C5.0 [Release 2.07 GPL Edition]      Thu Apr 17 20:56:07 2025
 ## -------------------------------
 ## 
 ## Class specified by attribute `outcome&#39;
@@ -5848,7 +5848,7 @@ summary(model)</code></pre>
 ##    0.01% Departure.Delay.Duration
 ## 
 ## 
-## Time: 1.2 secs</code></pre>
+## Time: 1.5 secs</code></pre>
 </div>
 <p>From training a decision tree model, we can see that the model is
 trained with the training data. The summary of the model shows the
@@ -5967,7 +5967,7 @@ summary(model)</code></pre>
 ## C5.0.formula(formula = Satisfaction ~ ., data = training)
 ## 
 ## 
-## C5.0 [Release 2.07 GPL Edition]      Thu Apr 17 20:20:49 2025
+## C5.0 [Release 2.07 GPL Edition]      Thu Apr 17 20:56:36 2025
 ## -------------------------------
 ## 
 ## Class specified by attribute `outcome&#39;
@@ -7176,7 +7176,7 @@ summary(model)</code></pre>
 ##    0.02% Arrival.Delay
 ## 
 ## 
-## Time: 1.4 secs</code></pre>
+## Time: 1.3 secs</code></pre>
 <pre class="r"><code># Print the confusion matrix
 print(&quot;Confusion matrix based on testing data&quot;)</code></pre>
 <pre><code>## [1] &quot;Confusion matrix based on testing data&quot;</code></pre>
@@ -7680,7 +7680,8 @@ model.ranger &lt;- ranger(Satisfaction ~.,
                        num.trees = 500, # how many trees should be grown?
                        mtry = 2, # how many variables to sample at each split?
                        replace = TRUE) # sampling of cases with or without replacement?</code></pre>
-<pre><code>## Growing trees.. Progress: 60%. Estimated remaining time: 20 seconds.</code></pre>
+<pre><code>## Growing trees.. Progress: 54%. Estimated remaining time: 25 seconds.
+## Growing trees.. Progress: 100%. Estimated remaining time: 0 seconds.</code></pre>
 <pre class="r"><code># Predicting on the testing data
 pred.test &lt;- predict(model.ranger, testing)$predictions
 
@@ -10115,7 +10116,10 @@ kbl(df_colored, escape = FALSE,
     align = &quot;lcccc&quot;) %&gt;%
   kable_styling(full_width = FALSE, bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;)) %&gt;%
   row_spec(0, background = &quot;#ADD8E6&quot;)  # Soft blue header</code></pre>
-<table class="table table-striped table-hover" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<pre><code>## Warning in gzfile(file, mode): cannot open compressed file
+## &#39;C:/Users/Andra/AppData/Local/Temp/Rtmp80aESF\file42d029aa4742&#39;, probable
+## reason &#39;No such file or directory&#39;</code></pre>
+<table class="table table-striped table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;background-color: rgba(173, 216, 230, 255) !important;">
@@ -10628,25 +10632,26 @@ process of airlines.</p>
 <h2><span class="header-section-number">4.4</span> Conclusion &amp;
 Limitations <a name="4.4"></a></h2>
 <p><strong>Conclusion</strong></p>
-<p>In part 1, Project Background part, highlights the business problem
-of identifying how airlines can improve their strategy of services and
-activities to increase customer satisfaction, especially between
-segments and main service areas, to achieve stronger competitive
+<p>In part 1, Project Background part, we highlights the business
+problem of identifying how airlines can improve their strategy of
+services and activities to increase customer satisfaction, especially
+between segments and main service areas, to achieve stronger competitive
 advantages. To address this issue, we analyze data from over 129,880
 airline passengers’ responses that evaluate the airline-related service
 they received. Given that the dataset does not provide information on
 the specific airline or ticket pricing, we will analyze the
 service-related factors that universally impact passenger
 satisfaction.</p>
-<p>In Part 2, Data Exploration and Preparation part, involved analyzing
-findings and insight to understand the data better. The process included
-exploratory data analysis (EDA), data cleaning, data transformation, and
-feature engineering. Crucial processes have already been done in this
-part, ranging from handling outlier and missing values, conducting
-univariate data analysis and the association between numerical and
-categorical variable analysis, transforming skew variables, and creating
-meaningful feature groups. Through this process, we ensure our dataset
-already has the proper treatment to proceed to the modeling part.</p>
+<p>In Part 2, Data Exploration and Preparation part, we involved
+analyzing findings and insight to understand the data better. The
+process included exploratory data analysis (EDA), data cleaning, data
+transformation, and feature engineering. Crucial processes have already
+been done in this part, ranging from handling outlier and missing
+values, conducting univariate data analysis and the association between
+numerical and categorical variable analysis, transforming skew
+variables, and creating meaningful feature groups. Through this process,
+we ensure our dataset already has the proper treatment to proceed to the
+modeling part.</p>
 <p>In part 3, Data Modeling part, we initially focused on applying
 dimensionality reduction through PCA, then continued to apply the
 decision tree model and logistic regression model to predict the
